@@ -1,0 +1,24 @@
+<template name="home">
+	<section class="sidebar">
+		<h1>Home | Blaze</h1>
+		{{#if currentUser}}
+			<h2 class="user-name">Hey, {{currentUser.profile.firstName}}</h2>
+			<h3>Level | {{currentUser.profile.level}}</h3>
+
+			<span class="signout">Sign Out</span>
+		{{else}}
+			<form autocomplete="on">
+				<input type="email" class="login-email" placeholder="Email">
+				<input type="password" class="login-password" placeholder="Password">
+				<button class="login-button">Login</button>
+			</form>
+		{{/if}}
+		<ul>
+			{{#each pages}}
+				<li>
+					<a href="{{slug}}">{{name}}</a>
+				</li>
+			{{/each}}
+		</ul>
+	</section>
+</template>
