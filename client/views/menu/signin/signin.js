@@ -1,5 +1,5 @@
-Template.home.events({
-	'submit form': function(e) {
+Template.signin.events({
+    'submit form': function(e) {
 		e.preventDefault()
 		var email = $('.login-email');
 		var password = $('.login-password');
@@ -14,7 +14,4 @@ Template.home.events({
 			}
 		})
 	},
-	'click .signout': function() {
-		Meteor.logout()
-	}
 })

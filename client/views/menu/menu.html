@@ -1,0 +1,17 @@
+<template name="menu">
+    <section class="sidebar">
+		<h1>FKOW | Blaze</h1>
+		{{#if currentUser}}
+			{{> account}}
+		{{else}}
+            {{> signin}}
+		{{/if}}
+        <ul>
+            {{#each pages}}
+                <li>
+                    <a href="{{slug}}">{{name}}</a>
+                </li>
+            {{/each}}
+        </ul>
+	</section>
+</template>

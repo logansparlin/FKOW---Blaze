@@ -1,0 +1,11 @@
+<template name="account">
+    <h2 class="user-name">Hey, {{currentUser.profile.firstName}}</h2>
+    <h3>Level | {{currentUser.profile.level}}</h3>
+    <h2>Points | {{currentUser.profile.progress}}</h2>
+
+    <span class="signout">Sign Out</span>
+
+    <div class="progress-bar-outer">
+        <span class="progress" data-progress="{{currentUser.profile.progress}}"></span>
+    </div>
+</template>
